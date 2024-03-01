@@ -272,7 +272,7 @@ If there are multiple offers, we'll create a new Product entity with modified pr
 
 ## API Endpoints:
 
-### Postman Collections : ![JSON](Pesto Ecommerce.postman_collection.json)
+[Download Pesto Ecommerce.postman_collection.json](./Pesto%20Ecommerce.postman_collection.json)
 
 ### POST User Registration:
 
