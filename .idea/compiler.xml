@@ -9,6 +9,7 @@
         <module name="config-service" />
         <module name="api-gateway-service" />
         <module name="discovery-service" />
+        <module name="product-manager-service" />
         <module name="auth-manager" />
       </profile>
     </annotationProcessing>
@@ -18,6 +19,7 @@
       <module name="api-gateway-service" options="-parameters" />
       <module name="auth-manager" options="-parameters" />
       <module name="config-service" options="-parameters" />
+      <module name="discovery-service" options="-parameters" />
     </option>
   </component>
 </project>
