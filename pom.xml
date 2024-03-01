@@ -14,6 +14,7 @@
         <module>config-service</module>
         <module>discovery-service</module>
         <module>product-manager-service</module>
+        <module>order-manager-service</module>
     </modules>
 
     <properties>
