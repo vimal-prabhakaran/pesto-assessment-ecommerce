@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "2d6e5c90-30d0-4e71-8fd5-c2c3f74cd02e",
+		"name": "Pesto Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Onboard Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\": \"iPhone 13 red 256GB\",\n    \"productDescription\": \"Lorem ipsum\",\n    \"availableInventory\": 50,\n    \"price\": 85000.00,\n    \"sellerId\": \"f5423841-7a8a-4044-a2d3-6f4dcccce51c\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/seller/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"seller",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiU0VMTEVSIiwic3ViIjoic2VsbGVyMSIsImlhdCI6MTcwOTIzMTc4MiwiZXhwIjoxNzA5MzAxNzgyfQ.WXINTG-3LifhDxYbfGc0dfT31d_G2AzXZKHMLE6oldA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": \"3e185d36-7a75-4a16-ac61-97cba5e92446\",\n    \"offerId\": \"14bb6a1f-7060-47aa-bd25-6f1007165404\",\n    \"availableInventory\": 50,\n    \"price\": 81000.00,\n    \"sellerId\": \"f5423841-7a8a-4044-a2d3-6f4dcccce51c\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/seller/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"seller",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/v1/seller/product?productId=3e185d36-7a75-4a16-ac61-97cba5e92446&sellerId=f5423841-7a8a-4044-a2d3-6f4dcccce51c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"seller",
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "3e185d36-7a75-4a16-ac61-97cba5e92446"
+						},
+						{
+							"key": "sellerId",
+							"value": "f5423841-7a8a-4044-a2d3-6f4dcccce51c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Seller Catalog",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiU0VMTEVSIiwic3ViIjoic2VsbGVyMSIsImlhdCI6MTcwOTIzMTc4MiwiZXhwIjoxNzA5MzAxNzgyfQ.WXINTG-3LifhDxYbfGc0dfT31d_G2AzXZKHMLE6oldA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/seller/products?sellerId=23b270a5-045b-4523-8a03-a2e640e6d3a4&pageNo=0&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"seller",
+						"products"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "3e185d36-7a75-4a16-ac61-97cba5e92446",
+							"disabled": true
+						},
+						{
+							"key": "sellerId",
+							"value": "23b270a5-045b-4523-8a03-a2e640e6d3a4"
+						},
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Global Product Search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "<JWT token>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/products/search?searchQuery=phone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "searchQuery",
+							"value": "phone"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place an Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "<JWT token>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"buyerId\": \"f31e08c9-a96a-4d47-8a0d-63ffd4c67939\",\n    \"orderItems\":[\n        {\n            \"offerId\":\"14bb6a1f-7060-47aa-bd25-6f1007165404\",\n            \"quantity\": 2\n        },\n        {\n            \"offerId\":\"68003706-56cc-4b0a-9c09-553be2a0e6a8\",\n            \"quantity\": 3\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiU0VMTEVSIiwic3ViIjoic2VsbGVyMSIsImlhdCI6MTcwOTIzMTc4MiwiZXhwIjoxNzA5MzAxNzgyfQ.WXINTG-3LifhDxYbfGc0dfT31d_G2AzXZKHMLE6oldA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/order/29677691-3c1d-4698-ae8e-6b355b806c35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"order",
+						"29677691-3c1d-4698-ae8e-6b355b806c35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Orders By BuyerID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiU0VMTEVSIiwic3ViIjoic2VsbGVyMSIsImlhdCI6MTcwOTIzMTc4MiwiZXhwIjoxNzA5MzAxNzgyfQ.WXINTG-3LifhDxYbfGc0dfT31d_G2AzXZKHMLE6oldA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders?buyerId=f31e08c9-a96a-4d47-8a0d-63ffd4c67939",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "buyerId",
+							"value": "f31e08c9-a96a-4d47-8a0d-63ffd4c67939"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Order",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "<JWT token>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"orderItemIds\":[\"efdaa916-e142-45c8-84c4-adabeab102fb\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/order/29677691-3c1d-4698-ae8e-6b355b806c35/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"order",
+						"29677691-3c1d-4698-ae8e-6b355b806c35",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all ordered items By SellerID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "<JWT token>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/seller/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"seller",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "sellerId",
+							"value": "f5423841-7a8a-4044-a2d3-6f4dcccce51c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register a user/seller",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"buyer1@sample.com\",\n    \"userName\": \"buyer1\",\n    \"password\": \"pass1234\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=4E9609F5D3C23EE81CB49DCD271D9C9A",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"seller1\",\n    \"password\": \"pass1234\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCT DETAILS BY SELLER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "<JWT token>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/seller/product?productId=3e185d36-7a75-4a16-ac61-97cba5e92446",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"seller",
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "3e185d36-7a75-4a16-ac61-97cba5e92446"
+						},
+						{
+							"key": "sellerId",
+							"value": "23b270a5-045b-4523-8a03-a2e640e6d3a4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
