@@ -385,6 +385,53 @@ curl --location --request GET 'http://localhost:8080/api/v1/seller/orders' \
 --header 'Authorization: <JWT token>' \
 --header 'Cookie: JSESSIONID=D7C782B20BA24F670C690C0F040B1AA9'
 
+## Steps to deploy in Google Kubernetes Engine
+
+# Microservices Deployment in Google Kubernetes Engine with Redis
+
+## Overview
+This document outlines the steps to deploy microservices in Google Kubernetes Engine (GKE) with Redis integration in API Gateway pods.
+
+## Steps for Deployment
+
+1. **Containerize Microservices:**
+   - Dockerize each microservice and push Docker images to Google Container Registry (GCR).
+
+2. **Set Up Redis:**
+   - Create a Redis instance in Google Cloud and ensure it is accessible from GKE cluster.
+
+3. **Configure Kubernetes Deployment Files:**
+   - Create Kubernetes deployment YAML files for each microservice.
+   - Configure environment variables, resource limits, and Redis connection settings in API Gateway deployment file.
+
+4. **Create Kubernetes Services:**
+   - Define Kubernetes service YAML files to expose microservices internally.
+   - Create a service to expose API Gateway externally.
+
+5. **Set Up Ingress Controller:**
+   - Deploy an Ingress Controller to manage external access to API Gateway.
+   - Configure routing rules to forward traffic to microservices.
+
+6. **Apply Kubernetes Resources:**
+   - Apply deployment and service files using `kubectl apply`.
+   - Monitor deployment progress using `kubectl get pods`.
+
+7. **Test Deployment:**
+   - Test accessibility of microservices and Redis from within the cluster.
+   - Use `kubectl port-forward` for testing individual services.
+
+8. **Set Up External Access:**
+   - Access API Gateway service externally using Ingress Controller's external IP.
+   - Test API endpoints and Redis integration.
+
+9. **Monitoring and Logging:**
+   - Configure monitoring and logging using Google Cloud Monitoring and Logging.
+   - Set up alerts for critical events.
+
+10. **Scaling and Maintenance:**
+    - Configure autoscaling for microservices.
+    - Perform routine maintenance tasks such as security updates and resource optimization.
+
 
 
 
