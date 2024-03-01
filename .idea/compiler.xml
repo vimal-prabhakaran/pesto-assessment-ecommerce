@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-service" />
+        <module name="order-manager-service" />
         <module name="api-gateway-service" />
         <module name="discovery-service" />
         <module name="product-manager-service" />
@@ -20,6 +21,8 @@
       <module name="auth-manager" options="-parameters" />
       <module name="config-service" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
+      <module name="order-manager-service" options="-parameters" />
+      <module name="product-manager-service" options="-parameters" />
     </option>
   </component>
 </project>
