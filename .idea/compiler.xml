@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway-service" />
         <module name="auth-manager" />
+        <module name="config-service" />
       </profile>
     </annotationProcessing>
   </component>
