@@ -88,7 +88,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8082/api/v1/seller/product?productId=3e185d36-7a75-4a16-ac61-97cba5e92446&sellerId=f5423841-7a8a-4044-a2d3-6f4dcccce51c",
+					"raw": "http://localhost:8082/api/v1/seller/product?productId=3e185d36-7a75-4a16-ac61-97cba5e92446",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -107,7 +107,8 @@
 						},
 						{
 							"key": "sellerId",
-							"value": "f5423841-7a8a-4044-a2d3-6f4dcccce51c"
+							"value": "f5423841-7a8a-4044-a2d3-6f4dcccce51c",
+							"disabled": true
 						}
 					]
 				}
@@ -130,7 +131,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/seller/products?sellerId=23b270a5-045b-4523-8a03-a2e640e6d3a4&pageNo=0&pageSize=10",
+					"raw": "http://localhost:8080/api/v1/seller/products?pageNo=0&pageSize=10",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -150,7 +151,8 @@
 						},
 						{
 							"key": "sellerId",
-							"value": "23b270a5-045b-4523-8a03-a2e640e6d3a4"
+							"value": "23b270a5-045b-4523-8a03-a2e640e6d3a4",
+							"disabled": true
 						},
 						{
 							"key": "pageNo",
@@ -220,7 +222,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \n    \"buyerId\": \"f31e08c9-a96a-4d47-8a0d-63ffd4c67939\",\n    \"orderItems\":[\n        {\n            \"offerId\":\"14bb6a1f-7060-47aa-bd25-6f1007165404\",\n            \"quantity\": 2\n        },\n        {\n            \"offerId\":\"68003706-56cc-4b0a-9c09-553be2a0e6a8\",\n            \"quantity\": 3\n        }\n    ]\n}"
+					"raw": "{\n    \n    \"orderItems\":[\n        {\n            \"offerId\":\"14bb6a1f-7060-47aa-bd25-6f1007165404\",\n            \"quantity\": 2\n        },\n        {\n            \"offerId\":\"68003706-56cc-4b0a-9c09-553be2a0e6a8\",\n            \"quantity\": 3\n        }\n    ]\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/v1/order",
