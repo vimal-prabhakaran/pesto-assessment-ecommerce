@@ -272,6 +272,8 @@ If there are multiple offers, we'll create a new Product entity with modified pr
 
 ## API Endpoints:
 
+### Postman Collections : ![JSON](Pesto Ecommerce.postman_collection.json)
+
 ### POST User Registration:
 
 curl --location --request POST 'http://localhost:8080/api/v1/auth/register' \
