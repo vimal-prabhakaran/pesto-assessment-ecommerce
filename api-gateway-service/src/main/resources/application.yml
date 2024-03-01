@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    web-application-type: REACTIVE
+  application:
+    name: api-gateway-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/vimal-prabhakaran/eureka-discovery-service-info.git
+          clone-on-start: true
